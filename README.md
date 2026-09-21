@@ -5,10 +5,9 @@ One-time deployable mobile-friendly music discovery web app.
 ## What it does
 
 - Searches Internet Archive audio items.
-- Searches Jamendo when `JAMENDO_CLIENT_ID` is configured.
 - Searches Audius public catalog/streams.
 - Shows provider/source links.
-- Offers direct MP3 download only when the provider exposes a downloadable file and, for Jamendo, explicitly allows application downloads.
+- Offers direct download only when the provider exposes a downloadable file and its rights/download conditions are clear.
 - Does not bypass DRM, paywalls, protected playback, or provider restrictions.
 
 ## Exact project structure
@@ -19,7 +18,6 @@ sach_n_jngd_music/
 ├── README.md
 ├── requirements.txt
 ├── server.py
-├── .env.example
 └── static/
     └── index.html
 ```
@@ -42,12 +40,6 @@ Create a new Web Service from this GitHub repository.
 - Plan: Free
 - No custom start command is required.
 
-Optional Jamendo setup:
-1. Obtain a Jamendo API client ID from their developer portal.
-2. In Render → Environment, add `JAMENDO_CLIENT_ID`.
-3. Redeploy once.
-
-Without the Jamendo key, the app still starts and the other providers can be searched.
 
 ## Health check
 
